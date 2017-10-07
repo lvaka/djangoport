@@ -3,59 +3,70 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="{% static 'scripts/myscript.js' %}"></script>
 		<title>LVaka Designs</title>
 	</head>
 	<body>
-		<div class="heading">
-			<div id="title">
-				<h1><a href="{% url 'post_list' %}">LVaka Designs</a></h1>
-			</div>
-			<div id="menu">
-				<ul>
-					<li><a href="{% url 'post_list' %}">Home</a></li>
-					<li><a href='#'>Projects</a></li>
-					<li><a href='#'>About</a></li>
-					<li>
-						<a href='#'>Contact</a>
-							<ul>
-								<li><a href="http://www.github.com/lvaka" target="new"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-								<li><a href="https://www.instagram.com/l_vaka" class="social-icon" target="new"> <i class="fa fa-instagram"></i></a></li>					            
-					            <li><a href="https://www.twitter.com/ejinshin" class="social-icon" target="new"> <i class="fa fa-twitter"></i></a></li>
-					            <li><a href="mailto:eric@lvakadesigns.com" target="new"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
-							</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div id="gridbox">
-			<div id="mainbody">
-				<div id="addnew">
-					<p><a href="{% url 'post_new' %}">Add New Post</a></p>
+		<div id="bodyContainer">
+			<div class="heading">
+				<div id="title">
+					<h1><a href="{% url 'post_list' %}">LVaka Designs</a></h1>
 				</div>
-				{% block content %}
-				{% endblock %}
+				<div id="menu">
+					<ul>
+						<li><a href="{% url 'post_list' %}">Blog</a></li>
+						<li><a href="#">Projects</a></li>
+						<li><a href="{% url 'about' %}">About</a></li>
+						<li onmouseleave="hideDiv()">
+							<a href='#' onmouseover="showDiv()">Contact</a>
+								<div id="contactIcons">
+								<ul>
+									<li><a href="http://www.github.com/lvaka" target="new"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+									<li><a href="https://www.instagram.com/l_vaka" class="social-icon" target="new"> <i class="fa fa-instagram"></i></a></li>					            
+						            <li><a href="https://www.twitter.com/ejinshin" class="social-icon" target="new"> <i class="fa fa-twitter"></i></a></li>
+						            <li><a href="mailto:eric@lvakadesigns.com" target="new"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+								</ul>
+								</div>
+						</li>
+					</ul>
+				</div>
 			</div>
+			<div id="gridbox">
+				<div id="mainbody">
+					{% block content %}
+					{% endblock %}
+				</div>
 
-			<aside id="knowledge">
-				<H3>Languages</H3>
-				<ul>
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>Javascript</li>
-					<li>Python</li>
-				</ul>
-				<H3>Libraries</H3>
-				<ul>
-					<li>jQuery</li>
-				</ul>
-				<H3>Frameworks</H3>
-				<ul>
-					<li>Django</li>
-				</ul>
-			</aside>
+				<aside id="knowledge">
+					<H1>Full Stack Developer</H1>
+					<H3>Languages</H3>
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>Javascript</li>
+						<li>Python</li>
+					</ul>
+					<H3>Libraries</H3>
+					<ul>
+						<li>jQuery</li>
+					</ul>
+					<H3>Frameworks</H3>
+					<ul>
+						<li>Django</li>
+					</ul>
+					<H3>Tools</H3>
+					<ul>
+						<li>Adobe Photoshop</li>
+						<li>Sublime Text</li>
+						<li>Notepad++</li>
+						<li>Github</li>
+					</ul>
+				</aside>
+			</div>
+			<footer>
+				<p>Eric J Shin</p>
+			</footer>
 		</div>
-		<footer>
-			<p>Eric J Shin</p>
-		</footer>
 	</body>
 </html>
