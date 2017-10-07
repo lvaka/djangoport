@@ -8,7 +8,7 @@
 	"buffers":
 	[
 		{
-			"file": "lvaka/blog/urls.py",
+			"file": "urls.py",
 			"settings":
 			{
 				"buffer_size": 692,
@@ -17,7 +17,7 @@
 			}
 		},
 		{
-			"file": "lvaka/blog/views.py",
+			"file": "views.py",
 			"settings":
 			{
 				"buffer_size": 1966,
@@ -26,7 +26,7 @@
 			}
 		},
 		{
-			"file": "lvaka/blog/templates/blog/post_edit.html",
+			"file": "templates/blog/post_edit.html",
 			"settings":
 			{
 				"buffer_size": 279,
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"file": "lvaka/blog/templates/blog/post_draft_list.html",
+			"file": "templates/blog/post_draft_list.html",
 			"settings":
 			{
 				"buffer_size": 360,
@@ -44,7 +44,7 @@
 			}
 		},
 		{
-			"file": "lvaka/blog/templates/blog/post_list.html",
+			"file": "templates/blog/post_list.html",
 			"settings":
 			{
 				"buffer_size": 685,
@@ -53,7 +53,7 @@
 			}
 		},
 		{
-			"file": "lvaka/blog/templates/blog/post_detail.html",
+			"file": "templates/blog/post_detail.html",
 			"settings":
 			{
 				"buffer_size": 652,
@@ -62,7 +62,7 @@
 			}
 		},
 		{
-			"file": "lvaka/blog/forms.py",
+			"file": "forms.py",
 			"settings":
 			{
 				"buffer_size": 141,
@@ -71,7 +71,7 @@
 			}
 		},
 		{
-			"file": "lvaka/blog/templates/blog/base.html",
+			"file": "templates/blog/base.html",
 			"settings":
 			{
 				"buffer_size": 2088,
@@ -80,7 +80,7 @@
 			}
 		},
 		{
-			"file": "lvaka/blog/static/scripts/myscript.js",
+			"file": "static/scripts/myscript.js",
 			"settings":
 			{
 				"buffer_size": 382,
@@ -89,7 +89,7 @@
 			}
 		},
 		{
-			"file": "lvaka/blog/static/css/style.css",
+			"file": "static/css/style.css",
 			"settings":
 			{
 				"buffer_size": 3400,
@@ -98,7 +98,7 @@
 			}
 		},
 		{
-			"file": "lvaka/blog/models.py",
+			"file": "models.py",
 			"settings":
 			{
 				"buffer_size": 528,
@@ -188,7 +188,7 @@
 			[
 				{
 					"buffer": 0,
-					"file": "lvaka/blog/urls.py",
+					"file": "urls.py",
 					"semi_transient": false,
 					"settings":
 					{
@@ -216,7 +216,7 @@
 				},
 				{
 					"buffer": 1,
-					"file": "lvaka/blog/views.py",
+					"file": "views.py",
 					"semi_transient": false,
 					"settings":
 					{
@@ -244,7 +244,7 @@
 				},
 				{
 					"buffer": 2,
-					"file": "lvaka/blog/templates/blog/post_edit.html",
+					"file": "templates/blog/post_edit.html",
 					"semi_transient": false,
 					"settings":
 					{
@@ -272,7 +272,7 @@
 				},
 				{
 					"buffer": 3,
-					"file": "lvaka/blog/templates/blog/post_draft_list.html",
+					"file": "templates/blog/post_draft_list.html",
 					"semi_transient": false,
 					"settings":
 					{
@@ -301,7 +301,7 @@
 				},
 				{
 					"buffer": 4,
-					"file": "lvaka/blog/templates/blog/post_list.html",
+					"file": "templates/blog/post_list.html",
 					"semi_transient": false,
 					"settings":
 					{
@@ -329,7 +329,7 @@
 				},
 				{
 					"buffer": 5,
-					"file": "lvaka/blog/templates/blog/post_detail.html",
+					"file": "templates/blog/post_detail.html",
 					"semi_transient": false,
 					"settings":
 					{
@@ -358,7 +358,7 @@
 				},
 				{
 					"buffer": 6,
-					"file": "lvaka/blog/forms.py",
+					"file": "forms.py",
 					"semi_transient": false,
 					"settings":
 					{
@@ -386,7 +386,7 @@
 				},
 				{
 					"buffer": 7,
-					"file": "lvaka/blog/templates/blog/base.html",
+					"file": "templates/blog/base.html",
 					"semi_transient": false,
 					"settings":
 					{
@@ -415,7 +415,7 @@
 				},
 				{
 					"buffer": 8,
-					"file": "lvaka/blog/static/scripts/myscript.js",
+					"file": "static/scripts/myscript.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -443,7 +443,7 @@
 				},
 				{
 					"buffer": 9,
-					"file": "lvaka/blog/static/css/style.css",
+					"file": "static/css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
@@ -472,7 +472,7 @@
 				},
 				{
 					"buffer": 10,
-					"file": "lvaka/blog/models.py",
+					"file": "models.py",
 					"semi_transient": false,
 					"settings":
 					{
@@ -537,7 +537,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "djangoport.sublime-project",
+	"project": "DjangoportBlogApp.sublime-project",
 	"replace":
 	{
 		"height": 42.0
