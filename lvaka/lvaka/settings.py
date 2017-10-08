@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'lvaka.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangogirls',
+        'NAME': 'lvaka',
         'USER': 'name',
         'PASSWORD': '',
         'HOST': 'localhost',
