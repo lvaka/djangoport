@@ -81,10 +81,10 @@ DATABASES['default'].update(db_from_env)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mylocaldb',
+        'NAME': 'postgresql-globular-37829',
         'USER': 'lvaka',
-        'PASSWORD': 'deadly',
-        'HOST': 'localhost',
+        'PASSWORD': 'holygrail1',
+        'HOST': 'data.heroku.com',
         'PORT': '5432',
     }
 }
