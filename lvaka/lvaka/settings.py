@@ -92,8 +92,8 @@ import dj_database_url
 DATABASES = {
         'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'murmuring-scrubland-44800',
-        'HOST': 'data.heroku.com',
+        'NAME': 'lvaka',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
