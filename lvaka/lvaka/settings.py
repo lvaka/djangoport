@@ -92,16 +92,14 @@ import dj_database_url
 DATABASES = {
         'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgresql-globular-37829',
-        'USER': 'lvaka',
-        'PASSWORD': 'holygrail1',
+        'NAME': 'murmuring-scrubland-44800',
         'HOST': 'data.heroku.com',
         'PORT': '5432',
     }
 }
 
 db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES = { 'default': dj_database_url.config() }
+DATABASES = {'default': dj_database_url.parse('postgres://nxfpkejlozjfly:e87a411f6d44175965334939b5eb257b6b0525d0db5132dff2213613aea8440d@ec2-107-20-214-99.compute-1.amazonaws.com:5432/d846ra5c6n4jpt')}
 DATABASES['default'].update(db_from_env)
 
 
