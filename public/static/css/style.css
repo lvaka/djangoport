@@ -219,8 +219,6 @@ a, a:visited{
 	text-align: center;
 }
 #addnew{
-	display: inline;
-	width: max-content;
 	float: right;
 	margin-top: 10px;
 }
