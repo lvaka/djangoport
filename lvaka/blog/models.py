@@ -18,3 +18,16 @@ class Post(models.Model):
 
 	def __str__(self):
 		return self.title
+
+"""class Project(models.Model):
+	author = models.ForeignKey('auth.User')
+	site_name = models.CharField(max_length=140)
+	site_url = models.CharField(max_length=400)
+	img_url = models.CharField(max_length=400)
+	languages = models.TextField()
+
+	def publish(self):
+		self.save()
+
+	def __str__(self):
+		return self.site_name"""

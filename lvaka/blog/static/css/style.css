@@ -34,6 +34,7 @@ h1, h2, h3 {
 }
 
 p{
+	font-size: 1.05em;
 	margin-top: 0;
 	margin-bottom: 0;
 	color: #404040;
@@ -84,7 +85,7 @@ table {
 #bodyContainer{
 	margin: 0 auto;
 	padding: 0;
-	max-width: 1200px;
+	/*max-width: 1200px;*/
 }
 
 #title{
@@ -276,4 +277,87 @@ input[type="text" i]{
 #about p{
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+@media only screen and (max-device-width: 600px){
+	.heading {
+		height: max-content;
+	}
+
+	#menu{
+		height: 3em;
+		line-height: 3em;
+	}
+
+	#menu li {
+		font-size: 1.4em;
+	}
+
+	#title h1{
+		font-size: 3em;
+	}
+
+	#title{
+		height: 4em;
+		line-height: 4em;
+	}
+
+	#gridbox{
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 70% auto;
+	grid-template-areas:
+		"mainBody asideMain"
+	}
+
+	#gridbox h1{
+		font-size: 1.4em;
+	}
+
+	#gridbox p{
+		font-size: 0.7em;
+	}
+
+	#gridbox a{
+		font-size: 0.6em;
+	}
+
+	.date {
+		font-size: 0.6em;
+	}
+
+	#knowledge h2{
+		font-size: .8em;
+	}
+
+	#knowledge h3{
+		font-size: .7em;
+	}
+
+	#knowledge li{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 0.7em;
+	color: #F2F2F2;
+	margin: 0 0.3em;
+	padding: 0.2em 0;
+	}
+
+	footer{
+	margin: 0;
+	padding: 0;
+	height: 3em;
+	line-height: 3em;
+	text-align: left;
+	width: 100%;
+	background: #666666;
+	}
+
+	footer p{
+		font-size: 2em;
+	}
+
+
+	br {
+		line-height: 0.2em;
+	}
 }
