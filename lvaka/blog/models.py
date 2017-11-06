@@ -21,9 +21,10 @@ class Post(models.Model):
 
 """class Project(models.Model):
 	author = models.ForeignKey('auth.User')
+	img_url = models.CharField(max_length=400)
 	site_name = models.CharField(max_length=140)
 	site_url = models.CharField(max_length=400)
-	img_url = models.CharField(max_length=400)
+	site_git = models.CharField(max_length=400)
 	languages = models.TextField()
 
 	def publish(self):

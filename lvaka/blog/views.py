@@ -45,6 +45,9 @@ def post_edit(request, pk):
 def about_page(request):
 	return render(request, 'blog/about.html')
 
+def projects(request):
+	return render(request, 'blog/projects.html')
+
 @login_required
 def post_draft_list(request):
 	posts = Post.objects.filter(published_date__isnull=True).order_by('created_date')

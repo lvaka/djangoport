@@ -1,9 +1,23 @@
 {% extends 'blog/base.html' %}
+{% load staticfiles %}
 
 {% block content %}
-		<div class="post">
-			<h1>Projects</h1>
-			<br />
-			<p><a href="http://htmlcss.lvakadesigns.com/Chego">Chego Restaurant</a> - HTML, CSS, Javascript</p>
+	<div id="project_grid">
+		<h1>Projects</h1>
+		<br />
+
+		<div class="project_entry">
+			<div class="project_image"><a href="http://htmlcss.lvakadesigns.com/Chego"><img src="{% static 'images/chego_snap.jpg' %}" /></a></div>
+			<div class="project_name"><a href="http://htmlcss.lvakadesigns.com/Chego"><p><b>Chego Restaurant</b></p></a></div>
+			<div class="project_git"><p><a href="https://github.com/lvaka/Chego">Git Hub</a></p></div>
+			<div class="languages"><p>Languages - HTML, CSS, Javascript, jQuery</p></div>
 		</div>
+
+		<div class="project_entry">
+			<div class="project_image"><a href="http://www.lvakadesigns.com"><img src="{% static 'images/lvaka_snap.jpg' %}" /></a></div>
+			<div class="project_name"><a href="http://www.lvakadesigns.com"><p><b>LVaka Designs</b></p></a></div>
+			<div class="project_git"><p><a href="https://github.com/lvaka/djangoport/tree/dreamhost">Git Hub</a></p></div>
+			<div class="languages"><p>Languages - HTML, CSS, Javascript, jQuery, Python-Django</p></div>
+		</div>
+	</div>
 {% endblock %}
