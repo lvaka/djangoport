@@ -276,6 +276,7 @@ input[type="text" i]{
 	display: inline;
 	width: max-content;
 	float: right;
+	font-size: 1.01em;
 	margin-top: 10px;
 }
 
