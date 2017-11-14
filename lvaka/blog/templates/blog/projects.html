@@ -2,22 +2,22 @@
 {% load staticfiles %}
 
 {% block content %}
+
+	{% if user.is_authenticated %}
+		<p><a href="{% url 'projects_upload' %}"><i class="fa fa-plus" aria-hidden="true"></i></a></p>
+	{% endif %}
+
 	<div id="project_grid">
 		<h1>Projects</h1>
 		<br />
 
-		<div class="project_entry">
-			<div class="project_image"><a href="http://htmlcss.lvakadesigns.com/Chego"><img src="{% static 'images/chego_snap.jpg' %}" /></a></div>
-			<div class="project_name"><a href="http://htmlcss.lvakadesigns.com/Chego"><p><b>Chego Restaurant</b></p></a></div>
-			<div class="project_git"><p><a href="https://github.com/lvaka/Chego">Git Hub</a></p></div>
-			<div class="languages"><p>Languages - HTML, CSS, Javascript, jQuery</p></div>
-		</div>
-
-		<div class="project_entry">
-			<div class="project_image"><a href="http://www.lvakadesigns.com"><img src="{% static 'images/lvaka_snap.jpg' %}" /></a></div>
-			<div class="project_name"><a href="http://www.lvakadesigns.com"><p><b>LVaka Designs</b></p></a></div>
-			<div class="project_git"><p><a href="https://github.com/lvaka/djangoport/tree/dreamhost">Git Hub</a></p></div>
-			<div class="languages"><p>Languages - HTML, CSS, Javascript, jQuery, Python-Django</p></div>
-		</div>
+		{% for project in project_list %}
+			<div class="project_entry">
+				<div class="project_image"><a href="{{ project.site_url }}"><img src="{{ media }}{{ project.image }}" /></a></div>
+			<div class="project_name"><a href="{{ project.site_url }}"><p><b>{{ project.site_name }}</b></p></a></div>
+			<div class="project_git"><p><a href="{{ project.site_git }}">Git Hub</a></p></div>
+			<div class="languages"><p>{{ project.languages }}</p></div>
+			</div>
+		{% endfor %}
 	</div>
 {% endblock %}

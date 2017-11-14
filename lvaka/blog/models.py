@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
 from django.db import models
 from django.utils import timezone
 
@@ -19,9 +18,8 @@ class Post(models.Model):
 	def __str__(self):
 		return self.title
 
-"""class Project(models.Model):
-	author = models.ForeignKey('auth.User')
-	img_url = models.CharField(max_length=400)
+class Project(models.Model):
+	image = models.FileField(upload_to="sites/")
 	site_name = models.CharField(max_length=140)
 	site_url = models.CharField(max_length=400)
 	site_git = models.CharField(max_length=400)
@@ -31,4 +29,4 @@ class Post(models.Model):
 		self.save()
 
 	def __str__(self):
-		return self.site_name"""
+		return self.site_name

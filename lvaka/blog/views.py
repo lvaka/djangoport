@@ -4,7 +4,11 @@ from django.utils import timezone
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Post
+from .models import Project
 from .forms import PostForm
+from .forms import ProjectForm
+from django.conf import settings
+from lvaka.settings import MEDIA_ROOT, MEDIA_URL
 
 # Create your views here.
 def post_list(request):
@@ -50,7 +54,13 @@ def about_page(request):
 	return render(request, 'blog/about.html')
 
 def projects(request):
-	return render(request, 'blog/projects.html')
+	if settings.DEBUG:
+		media = MEDIA_URL
+	else:
+		media = MEDIA_ROOT
+
+	project_list = Project.objects.order_by('pk')
+	return render(request, 'blog/projects.html', {'project_list': project_list, 'media': media,})
 
 @login_required
 def post_draft_list(request):
@@ -67,3 +77,14 @@ def post_remove(request, pk):
 	post = get_object_or_404(Post, pk=pk)
 	post.delete()
 	return redirect('post_list')
+
+@login_required
+def projects_upload(request):
+    if request.method == 'POST':
+        form = ProjectForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('projects')
+    else:
+        form = ProjectForm()
+    return render(request, 'blog/projects_upload.html', {'form': form})

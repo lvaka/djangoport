@@ -34,6 +34,7 @@ h1, h2, h3 {
 }
 
 p{
+	font-size: 1.05em;
 	margin-top: 0;
 	margin-bottom: 0;
 	color: #404040;
@@ -55,7 +56,9 @@ a, a:visited{
 	font-family: 'Oswald', sans-serif;
 	color: #363636;
 	text-decoration: none;
+	font-size: 1.05em;
 }
+
 table {
 	color: #404040;
 	font-family: 'Oswald', sans-serif;
@@ -66,7 +69,6 @@ table {
 	margin: 0;
 	padding: 0;
 	height: 100px;
-	background: #3B3B3B;
 	display: inline-block;
 }
 
@@ -84,12 +86,12 @@ table {
 #bodyContainer{
 	margin: 0 auto;
 	padding: 0;
-	max-width: 1200px;
 }
 
 #title{
 	height: 60px;
 	line-height: 60px;
+	background: #3B3B3B;
 }
 
 #gridbox{
@@ -97,19 +99,20 @@ table {
 	display: grid;
 	grid-template-columns: 80% auto;
 	grid-template-areas:
-		"mainBody asideMain"
+		"mainBody asideMain";
 }
 
 #mainbody{
-	grid-area: "mainBody";
+	grid-area: mainBody;
 	margin: 0;
 	padding: 0 40px;
 	background: #F0F0F0;
 	padding-bottom: 40px;
 }
 
+/*SideBar Styling*/
 #knowledge{
-	grid-area: "asideMain";
+	grid-area: asideMain;
 	padding: 0;
 	margin: 0;
 	background: #3B3B3B;
@@ -134,6 +137,7 @@ table {
 	margin: 0;
 	padding: 2px 0;
 }
+
 #knowledge li:hover{
 	-o-transition:.3s;
   	-ms-transition:.3s;
@@ -143,7 +147,10 @@ table {
 	letter-spacing: 0.08em;
 	background: rgb(70,70,70);
 }
+/*End of SideBar*/
 
+
+/*Specific Styling for Blog Posts*/
 .date p{
 	margin-left: 0;
 	margin-bottom: 0;
@@ -175,8 +182,15 @@ table {
 	color: #C4252F;
 	text-decoration: underline;
 }
+/*End of Blog Post Styling*/
 
 /*Styling for New Post Form*/
+.post-form p{
+	display: block;
+	font-size: 1.4em;
+	margin: 10px 0;
+}
+
 .post-form p label{
 	float: left;
 	top: 0;
@@ -193,6 +207,7 @@ input[type="text" i]{
 }
 /*End Styling for New Post Form*/
 
+/*Page Selection Menu*/
 #menu{
 	width: 100%;
 	margin: 0;
@@ -234,6 +249,9 @@ input[type="text" i]{
 	text-decoration: underline;
 }
 
+/*End of Page Selection Menu*/
+
+/*Contact Icons nested in Page Selection Menu*/
 #contactIcons{
 	display: none;
 	width: max-content;
@@ -250,10 +268,15 @@ input[type="text" i]{
 	padding: 0;
 	text-align: center;
 }
+/*End of Contact Icons*/
+
+
+/*CRUD buttons*/
 #addnew{
 	display: inline;
 	width: max-content;
 	float: right;
+	font-size: 1.01em;
 	margin-top: 10px;
 }
 
@@ -263,12 +286,69 @@ input[type="text" i]{
 	letter-spacing: 0.05em;
 }
 
-.post-form p{
-	display: block;
-	font-size: 1.4em;
-	margin: 10px 0;
+/*End of CRUDS buttons*/
+
+/*Projects Styling*/
+
+#project_grid{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 900px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
 }
 
+#project_grid a:hover, #project_grid a:hover b{
+	-o-transition:.3s;
+  	-ms-transition:.3s;
+ 	-moz-transition:.3s;
+  	-webkit-transition:.3s;
+	color: #C4252F;
+	letter-spacing: 0.08em;
+	text-decoration: underline;
+}
+
+.project_entry{
+	box-shadow: 0 0 10px rgba(2,2,2,0.4);
+	display: grid;
+	margin: 20px;
+	padding-top:20px;
+	padding-bottom:20px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 325px 1fr 1fr;
+	grid-template-areas:
+		"projectImage     projectImage"
+		"projectName      projectGit"
+		"projectLanguages projectLanguages";
+}
+
+.project_image{
+	grid-area: projectImage;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+.project_image img{
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	max-height: 320px;
+}
+.project_name{
+	grid-area: projectName;
+}
+.project_git{
+	grid-area: projectGit;
+}
+.languages{
+	grid-area: projectLanguages;
+}
+
+/*End Projects Styling*/
+
+/*Styling for large text in About Page*/
 #about{
 	margin-top: 20px;
 }
@@ -276,4 +356,95 @@ input[type="text" i]{
 #about p{
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+/*End of About Page Specific*/
+
+
+/*Mobile Device Media Query*/
+@media only screen and (max-device-width: 600px){
+	.heading {
+		height: max-content;
+	}
+
+	#menu{
+		height: 3em;
+		line-height: 3em;
+	}
+
+	#menu li {
+		font-size: 1.4em;
+	}
+
+	#title h1{
+		font-size: 3em;
+	}
+
+	#title{
+		height: 4em;
+		line-height: 4em;
+	}
+
+	#gridbox{
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 70% auto;
+	grid-template-areas:
+		"mainBody asideMain"
+	}
+
+	#gridbox h1{
+		font-size: 1.4em;
+	}
+
+	#gridbox p{
+		font-size: 0.7em;
+	}
+
+	#gridbox a{
+		font-size: 0.6em;
+	}
+
+	.date {
+		font-size: 0.6em;
+	}
+
+	#knowledge h2{
+		font-size: .8em;
+	}
+
+	#knowledge h3{
+		font-size: .7em;
+	}
+
+	#knowledge li{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 0.7em;
+	color: #F2F2F2;
+	margin: 0 0.3em;
+	padding: 0.2em 0;
+	}
+
+	footer{
+	margin: 0;
+	padding: 0;
+	height: 3em;
+	line-height: 3em;
+	text-align: left;
+	width: 100%;
+	background: #666666;
+	}
+
+	footer p{
+		font-size: 2em;
+	}
+
+
+	br {
+		line-height: 0.2em;
+	}
+
+	.project_image img{
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	max-width: 80%;
+	}
 }

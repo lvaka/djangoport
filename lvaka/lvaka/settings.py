@@ -133,4 +133,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.dirname(BASE_DIR) + '/public/static/'
+MEDIA_URL = '/static/images/'
+
+if DEBUG:
+    MEDIA_ROOT = os.path.dirname(BASE_DIR) + '/lvaka/blog/static/images/'
+
+else:
+    MEDIA_ROOT = os.path.dirname(BASE_DIR) + '/public/static/images/'
+
 LOGIN_REDIRECT_URL = '/'
