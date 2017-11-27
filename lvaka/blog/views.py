@@ -57,9 +57,9 @@ def projects(request):
 	if settings.DEBUG:
 		media = MEDIA_URL
 	else:
-		media = MEDIA_ROOT
+		media = 'http://www.lvakadesigns.com/static/images/'
 
-	project_list = Project.objects.order_by('pk')
+	project_list = Project.objects.order_by('-pk')
 	return render(request, 'blog/projects.html', {'project_list': project_list, 'media': media,})
 
 @login_required

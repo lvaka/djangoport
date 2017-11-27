@@ -318,7 +318,7 @@ input[type="text" i]{
 	padding-top:20px;
 	padding-bottom:20px;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 325px 1fr 1fr;
+	grid-template-rows: 21rem 1fr 1fr;
 	grid-template-areas:
 		"projectImage     projectImage"
 		"projectName      projectGit"
@@ -331,10 +331,12 @@ input[type="text" i]{
 	margin-bottom: auto;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 5px;
 }
 .project_image img{
 	box-shadow: 0 0 10px rgba(0,0,0,0.4);
-	max-height: 320px;
+	max-width: 100%;
+	max-height: 18rem;
 }
 .project_name{
 	grid-area: projectName;
@@ -385,11 +387,11 @@ input[type="text" i]{
 	}
 
 	#gridbox{
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: 70% auto;
-	grid-template-areas:
-		"mainBody asideMain"
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 70% auto;
+		grid-template-areas:
+			"mainBody asideMain"
 	}
 
 	#gridbox h1{
@@ -443,8 +445,51 @@ input[type="text" i]{
 		line-height: 0.2em;
 	}
 
-	.project_image img{
-	box-shadow: 0 0 10px rgba(0,0,0,0.4);
-	max-width: 80%;
+	#project_grid{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 900px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
 	}
+
+	#project_grid a, #project_grid p{
+		font-size: 1rem;
+	}
+
+	.project_entry{
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"projectImage"
+			"projectName"
+			"projectGit"
+			"projectLanguages";
+	}
+
+}
+
+@media only screen and (max-width: 850px){
+	#project_grid{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 900px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+	}
+
+	.project_entry{
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"projectImage"
+			"projectName"
+			"projectGit"
+			"projectLanguages";
+	}
+
 }
